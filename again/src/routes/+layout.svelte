@@ -1,3 +1,5 @@
+<!-- Elements visibles sur toutes les pages -->
+
 <script>
 	import "../app.pcss";
     import Header from './Header.svelte';
@@ -5,7 +7,8 @@
 </script>
 
 <div class="app">
-	<Header></Header>
+	<Header>
+	</Header>
 
 	<main>
 		<slot></slot>
@@ -21,17 +24,12 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-	}
+	} */
 
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		background-color: aliceblue;
+		/* flex: 1;
+		box-sizing: border-box; */
 	}
 
 	footer {
@@ -42,13 +40,8 @@
 		padding: 12px;
 	}
 
-	footer a {
+	/* footer a {
 		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	} */
+
 </style>
