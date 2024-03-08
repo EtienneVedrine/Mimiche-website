@@ -1,17 +1,14 @@
 <!-- Homepage -->
 
 <script>
+	// import load function 
+	/** @type {import('./$types').PageData} */
+	export let data;
+
 	import portrait2 from '$lib/images/portrait2.jpg';
 	import bob from '$lib/images/Dessin levain.jpg';
 
-	// const getPosts = async() => {
-	// 	const res = await fetch("https://jsonplaceholder.typicode.com/photos");
-	// 	const data = await res.json();
-	// 	console.log(data)
-	// 	return data
-	// };
 
-	// getPosts();
 </script>
 
 <svelte:head>
@@ -19,8 +16,14 @@
 	<meta name="description" content="Homepage" />
 </svelte:head>
 
+<!-- Access the values of the load function -->
+<h1>{data.global.title}</h1>
+<p>{data.global.description}</p>
+
 <main>
-	<!-- Section 1 -->
+
+
+		<!-- Section 1 -->
 	<section id="section1" class="grid place-items-center sm:grid-cols-2">
 		<!-- Présentation -->
 		<div class=" border p-6">

@@ -1,5 +1,16 @@
-// Pour ajouter des éléments JS
+// To add JS elements or dynamic data
 
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+
+//This file's load function will be responsible to fetch the data on the client and on the server during Server Side Rendering.
+
+/** @type {import('./$types').PageLoad} */
+import getDirectusInstance from '$lib/directus';
+import { readItems } from '@directus/sdk';
+
+// We use the Directus SDK to read the global collection//
+export async function load({ fetch }) {
+	const directus = getDirectusInstance(fetch)
+	return {
+		global: await directus.request(readItems('global')),
+	};
+}

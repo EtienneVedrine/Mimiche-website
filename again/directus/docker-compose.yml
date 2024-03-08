@@ -9,6 +9,13 @@ services:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     environment:
+      DATABASE_URL: sqlite://data/db.sqlite
+      # CORS_ORIGIN: http://localhost:8055
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "http://localhost:5173" 
+      # CORS_METHODS: GET, POST, PUT, PATCH, DELETE, OPTIONS
+      CORS_ALLOWED_HEADERS: Content-type, Authorization
+      # CORS_CREDENTIALS: "true"
       KEY: "replace-with-random-value"
       SECRET: "replace-with-random-value"
       ADMIN_EMAIL: "admin@example.com"

@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@directus/sdk": "^15.0.2",
 		"sqlite3": "^5.1.7"
 	}
 }

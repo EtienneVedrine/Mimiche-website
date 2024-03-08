@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@directus/sdk": "^15.0.2",
     "directus": "^10.9.3",
     "directus-extension-api-viewer": "^1.2.3",
     "nodejs": "^0.0.0",
